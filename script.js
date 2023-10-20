@@ -24,60 +24,66 @@ function generatePassword() {
   const numbersChoice = confirm("Do you want numbers in your password?")
 }
 
-
-
-let specialCount = "";
-let lowerCaseCount = "";
-let upperCaseCount = "";
-let numberCount = "";
-
-let returnPassword = {
-  specialCharacterQuantity: function() {
-    return specialCharacters(Math.floor(Math.random() * specialCharacters.length));
-  },
-
-  lowerCaseQuantity: function() {
-    return lowerCaseCharacters(Math.floor(Math.random() * lowerCaseCharacters.length));
-  },
-
-  upperCaseQuantity: function() {
-    return upperCaseCharacters(Math.floor(Math.random() * upperCaseCharacters.length));
-  },
-
-  numberQuantity: function() {
-    return (Math.floor(Math.random() * 10));
-  }
-}
-
-
-
-if (specialCharactersChoice === true) {
-  specialCount = returnPassword.specialCharacterQuantity();
-}
-
-if (lowerCaseChoice === true) {
-  lowerCaseCount = returnPassword.lowerCaseQuantity();
-}
-
-if (upperCaseChoice === true) {
-  upperCaseCount = returnPassword.upperCaseQuantity();
-}
-
-if (numbersChoice === true) {
-  numberCount = returnPassword.numberQuantity();
-}
-
 if (passwordLengthChoice >= 8) {
   if (passwordLengthChoice <= 128) {
+
+      let returnPassword = {
+        specialCharacterQuantity = function() {
+          return specialCharacters(Math.floor(Math.random() * specialCharacters.length));
+        },
+
+        lowerCaseQuantity = function() {
+          return lowerCaseCharacters(Math.floor(Math.random() * lowerCaseCharacters.length));
+        },
+
+        upperCaseQuantity = function() {
+          return upperCaseCharacters(Math.floor(Math.random() * upperCaseCharacters.length));
+        },
+
+        numberQuantity = function() {
+          return (Math.floor(Math.random() * 10));
+        }
+      }
+
+      let specialCount = "";
+      let lowerCaseCount = "";
+      let upperCaseCount = "";
+      let numberCount = "";
+
+      let randomPassword = "";
+      let minCharacter = 0;
+
+      if (specialCharactersChoice === true) {
+        specialCount = returnPassword.specialCharacterQuantity();
+        minCharacter++;
+      }
+
+      if (lowerCaseChoice === true) {
+        lowerCaseCount = returnPassword.lowerCaseQuantity();
+        minCharacter++;
+      }
+
+      if (upperCaseChoice === true) {
+        upperCaseCount = returnPassword.upperCaseQuantity();
+        minCharacter++;
+      }
+
+      if (numbersChoice === true) {
+        numberCount = returnPassword.numberQuantity();
+        minCharacter++;
+      }
+
+
     for (let i = 0; i <= passwordLengthChoice; i++ ){
-      
-    }
-  }
-  else () {
 
+      randomPassword =+ 
+    };
   }
+  else {
+      document.getElementById("#password") = "Password Length must be between 8 and 128 characters."
+  };
 }
 
-else () {
-
-}
+else  {
+  document.getElementById("#password") = "Password Length must be between 8 and 128 characters."
+};
