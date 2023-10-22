@@ -24,6 +24,7 @@ Durning the creation of this generator I have learned Javascript skills. These s
 * I used my prior knowlegdge from our classes and independant research to discover what functions to use to randomize a selection from an array. 
 
 ## Screenshot
-![Full-Screenshot](./assets/)
+![Full-Screenshot](./assets/images/generator_screenshot.png)
 
 ## Links
+https://baldwisj.github.io/random_password_generator/
